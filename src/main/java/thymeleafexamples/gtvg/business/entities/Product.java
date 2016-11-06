@@ -22,13 +22,27 @@ package thymeleafexamples.gtvg.business.entities;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
+import java.io.Serializable;
+import java.util.List;
 
-public class Product {
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
+@Entity
+public class Product implements Serializable{
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name="id")
     private Integer id = null;
+    @Column(name="name")
     private String name = null;
+    @Column(name="price")
     private BigDecimal price = null;
+    @Column(name="inStock")
     private boolean inStock = false;
+    @Column(name="comments")
     private List<Comment> comments = new ArrayList<Comment>();
     
     

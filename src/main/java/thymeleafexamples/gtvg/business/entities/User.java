@@ -18,13 +18,25 @@
  * =============================================================================
  */
 package thymeleafexamples.gtvg.business.entities;
+import java.io.Serializable;
+import java.util.List;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
-public class User {
+@Entity
+public class User implements Serializable{
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name="firstName")
     private String firstName = null;
+    @Column(name="lastName")
     private String lastName = null;
+    @Column(name="nationality")
     private String nationality = null;
+    @Column(name="age")
     private Integer age = null;
     
     

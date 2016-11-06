@@ -20,11 +20,23 @@
 package thymeleafexamples.gtvg.business.entities;
 
 import java.math.BigDecimal;
+import java.io.Serializable;
+import java.util.List;
 
-public class OrderLine {
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
+@Entity
+public class OrderLine implements Serializable{
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name="product")
     private Product product = null;
+    @Column(name="amount")
     private Integer amount = null;
+    @Column(name="purchasePrice")
     private BigDecimal purchasePrice = null;
     
     
