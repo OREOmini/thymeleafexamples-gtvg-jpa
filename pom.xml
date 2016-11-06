@@ -218,5 +218,42 @@
     </dependency>
        
   </dependencies>
+  <!-- spring -->
+    <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${springframework.version}</version>
+    </dependency>
+
+    <!-- persistence -->
+<dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>${mysql-connector-java.version}</version>
+    </dependency>
+
+    <!-- utils -->
+    <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>${guava.version}</version>
+    </dependency>
+
+    <!-- data source -->
+    <dependency>
+            <groupId>org.apache.tomcat</groupId>
+            <artifactId>tomcat-dbcp</artifactId>
+            <version>${datasource-dbcp.version}</version>
+    </dependency>
+    <dependency>
+    <groupId>javax.persistence</groupId>
+    <artifactId>persistence-api</artifactId>
+    <version>1.0.2</version>
+</dependency>
+<dependency>
+        <groupId>org.hibernate</groupId>
+        <artifactId>hibernate-entitymanager</artifactId>
+        <version>${hibernate.version}</version>
+</dependency>
     
 </project>
