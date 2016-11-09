@@ -76,6 +76,16 @@
   <properties>
     <project.build.sourceEncoding>ISO-8859-1</project.build.sourceEncoding>
     <thymeleaf.version>3.0.2.RELEASE</thymeleaf.version>
+    <!-- spring -->
+    <springframework.version>4.3.3.RELEASE</springframework.version>
+    
+    <!-- persistence -->
+  <hibernate.version>5.0.11.Final</hibernate.version>
+  <mysql-connector-java.version>5.1.38</mysql-connector-java.version>
+  <datasource-dbcp.version>7.0.65</datasource-dbcp.version>
+
+  <!-- util -->
+  <guava.version>17.0</guava.version>
   </properties>
   
   
@@ -216,9 +226,12 @@
         </exclusion>
       </exclusions>
     </dependency>
-       
-  </dependencies>
-  <!-- spring -->
+       <!-- spring -->
+       <dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-orm</artifactId>
+    <version>${springframework.version}</version>
+  </dependency>
     <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
@@ -256,4 +269,6 @@
         <version>${hibernate.version}</version>
 </dependency>
     
+  </dependencies>
+
 </project>

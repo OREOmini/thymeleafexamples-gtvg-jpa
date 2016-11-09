@@ -22,12 +22,33 @@ package thymeleafexamples.gtvg.business.entities;
 import java.util.Calendar;
 import java.util.LinkedHashSet;
 import java.util.Set;
+import java.io.Serializable;
+import java.util.List;
 
-public class Order {
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.OrderBy;
 
+@Entity
+public class Order implements Serializable{
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name="id")
     private Integer id = null;
+
+    @Column(name="date")
     private Calendar date = null;
+
+    @Column(name="customer")
     private Customer customer = null;
+
+    @Column(name="orderLines")
     private Set<OrderLine> orderLines = new LinkedHashSet<OrderLine>();
     
     public Order() {
